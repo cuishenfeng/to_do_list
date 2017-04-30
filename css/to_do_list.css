@@ -1,0 +1,77 @@
+html,body{
+    width:100%;height:100%;
+    overflow:hidden;
+    background: url("../img/bg.png") repeat;
+}
+.container-fluid{
+    height:100%;
+}
+.row{
+    height:100%;
+}
+.left{
+    height:100%;
+    padding-top:10px;
+    border-right:1px solid #000;
+    box-sizing: border-box;
+    position: relative;
+}
+.right{
+    height:100%;
+}
+.done,.backlog{
+    height:30px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.nums{
+    color: red;
+}
+.list{
+    height:20px;
+    line-height: 20px;
+    padding:0 10px;
+}
+.list input{
+    border:none;
+    padding-left: 8px;
+    background: none;
+}
+.list span{
+    float: right;
+    line-height: 20px;
+    cursor: pointer;
+}
+.list .del{
+    line-height: 20px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s linear;
+    cursor: pointer;
+}
+.list:hover .del{
+    visibility: visible;
+    opacity:1;
+}
+.add{
+    position: absolute;
+    left:0;bottom:0;
+}
+/*右侧*/
+header{
+    width:100%;height:40px;
+    padding:0 20px;
+    line-height: 40px;
+    border-bottom:1px solid #5e5e5e;
+}
+.addSon{
+    float: right;
+    cursor: pointer;
+}
+.doneBtn{
+    border-radius: 50%;
+    width:10px;height:10px;
+    border:1px solid #000;
+    display: inline-block;
+    cursor: pointer;
+}
