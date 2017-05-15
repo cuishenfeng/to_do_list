@@ -9,7 +9,6 @@ angular.module("myapp",[])
         $scope.currentCon=$scope.data[$scope.currentIndex];
         /*是否显示完成列表*/
         $scope.isshow=true;
-
         /*添加事项*/
         $scope.add=function() {
             var obj = {};
@@ -152,6 +151,4 @@ angular.module("myapp",[])
         }else if($scope.data.length==0){
             $scope.unDone=0;
         }
-
-
     }])

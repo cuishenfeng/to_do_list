@@ -29,7 +29,7 @@
             <div class="backlog">
                 <span class="glyphicon glyphicon-th-list"></span>
                 <span ng-click="showCon()">待办事项</span>
-                <span>{{unDone}}</span>
+                <span class="listNum">{{unDone}}</span>
             </div>
             <!-- track by item.id  按照自己设定的id走 -->
             <div class="list" ng-repeat="item in data | filter:{title:search} track by item.id">
@@ -41,9 +41,9 @@
                 <span class="glyphicon glyphicon-plus"></span>
             </div>
         </div>
-        <div class="right col-xs-5 col-sm-8 col-md-9" ng-show="isshow==true">
+        <div class="right col-xs-7 col-sm-8 col-md-9" ng-show="isshow==true">
             <header>
-                <span>{{currentCon.title}}</span>
+                <span style="font-size: 1.2em">{{currentCon.title}}</span>
                 <span class="addSon" ng-click="addOpt()">
                     添加条目
                     <span class="glyphicon glyphicon-plus"></span>
@@ -52,6 +52,7 @@
             <div class="list" ng-repeat="item in currentCon.son track by item.id">
                 <div class="doneBtn" ng-click="doneFun(item.id)"></div>
                 <input type="text" ng-model="item.title" ng-blur="blur()">
+
                 <div class="glyphicon glyphicon-trash del" ng-click="delOpt(item.id)"></div>
             </div>
         </div>
